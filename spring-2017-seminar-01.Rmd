@@ -1,7 +1,7 @@
 ---
 title: "Spring 2017, Seminar 01"
 author: "Christopher Prener, Ph.D."
-date: "`r format(Sys.time(), '%d %B %Y')`"
+date: "25 Jan 2017"
 output: html_notebook
 ---
 
@@ -12,10 +12,95 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 plot(cars)
 ```
 
+You'll notice all of the formatting used here with the text. This is *Markdown* formatting, which is a lightweight markup syntax that RStudio increasingly utilizes to produce reproducible research products. You can find out all about Markdown by checking out [this tutorial](https://guides.github.com/features/mastering-markdown/).
+
 ### Data
-Today, we'll use two data sources for 
+Today, we'll use two data sources for our class. The examples we'll discuss come from [fivethirtyeight.com](https://fivethirtyeight.com). The [data](https://github.com/fivethirtyeight/data) was originally used for [this article](https://fivethirtyeight.com/datalab/do-pulitzers-help-newspapers-keep-readers/) that investigated whether [Pulitzer Prizes](http://www.pulitzer.org) helped newspapers keep readers.
 
 ```{r}
-auto2016 <- read.csv(auto2016.csv, stringsAsFactors = FALSE)
+prize <- read.csv("pulitzer-circulation-data.csv", stringsAsFactors = FALSE)
 ```
 
+Pay close attention to the structure of the code above. We've assigned the data in the `csv` file to an object named `prize`. We use the `read.csv()` function to do this. You *must* place the filename in quotes
+
+Now, practice writing this code on the other dataset in the seminar's directory: `auto2016.csv`. These data come from the [U.S. Department of Energy](https://www.fueleconomy.gov/feg/download.shtml) and have been extensively cleaned by Chris.
+
+```{r}
+
+```
+
+### Exploring the Dataset
+
+#### The View Function
+We can open up a tabular view of the data using the view function:
+```{r}
+View(prize)
+```
+
+Now try opening up that view with the automobile data:
+```{r}
+
+```
+
+
+#### The Structure Function
+
+The variables within `prize` are visible in the environment tab. You can also get a table that summarizes your variables using the structure function - `str()`.
+
+```{r}
+str(prize)
+```
+
+Note that you can see the variable names, their data types (`chr` for character and `int` for integer, a particular type of numeric variable), and some examples of the data they contain.
+
+Now try using the structure function on the automobile data:
+
+```{r}
+
+```
+
+#### Confirming Data Types
+
+There are ways to automatically confirm the types of variables that you have. For example, we can test whether `Newspaper` is a character or numeric variable:
+
+```{r}
+is.numeric(prize$Newspaper)
+is.character(prize$Newspaper)
+```
+
+Note that the output follows the order of the commands. So line 1 corresponds with command 1, and line 2 corresponds with command 2.
+
+Now, using the automobile data, test whether the variable `brand` is numeric or character:
+
+```{r}
+
+```
+
+#### Looking at Individual Observations
+
+We can use two functions - `head()` and `tail()` - to look at the first 6 and last 6 observations of a dataset. Note that presence of the black right facing triangle icon on the right side of the table. You can use that to scroll right to view more columns.
+
+```{r}
+head(prize)
+```
+
+```{r}
+tail(prize)
+```
+
+Now, use the `head()` and `tail()` functions to explore the automobile data.
+
+Head of the automobile dataset:
+```{r}
+
+```
+
+Tail of the automobile dataset:
+```{r}
+
+```
+
+#### RStudio Output
+Everytime you save your RNotebook, an `html` file will automatically be generated containing all of your output. You can view it from within RStudio, or open it using a web browser. You can also use the Knit button to create a `pdf` of your results. 
+
+Try this for the automobile dataset.
