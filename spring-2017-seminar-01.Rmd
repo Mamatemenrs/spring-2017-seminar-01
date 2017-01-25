@@ -1,0 +1,21 @@
+---
+title: "Spring 2017, Seminar 01"
+author: "Christopher Prener, Ph.D."
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_notebook
+---
+
+### Introduction
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. Look for the *Run* button, which is a green, right facing triangle shaped icon on the right side of the code chunk.
+
+```{r}
+plot(cars)
+```
+
+### Data
+Today, we'll use two data sources for 
+
+```{r}
+auto2016 <- read.csv(auto2016.csv, stringsAsFactors = FALSE)
+```
+
