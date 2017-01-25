@@ -2,7 +2,7 @@
 
 ### Repository Contents
 This repository contains files for:
-  - fall-2016-seminar-01.R
+  - spring-2017-seminar-01.Rmd
   - LICENSE.md
   - README.md
 
