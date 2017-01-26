@@ -2,9 +2,15 @@
 
 ### Repository Contents
 This repository contains files for:
-  - spring-2017-seminar-01.Rmd
-  - LICENSE.md
-  - README.md
+-   `.gitignore`
+-   `auto2016.csv` - exercise data
+-   `LICENSE.md`
+-   `pulitzer-circulation-data.csv` - example data
+-   `README.md`
+-   `spring-2017-seminar-01.nb.html` - seminar notebook html output
+-   `spring-2017-seminar-01.pdf` - seminar notebook pdf output
+-   `spring-2017-seminar-01.Rmd` - R notebook for seminar
+-   `spring-2017-seminar-01.Rproj` - R project for seminar
 
 ### Fall 2017 - Building Linear Models in `R`
 This is the third edition of the SLU Data Science Seminar (DSS). This semester is focused on using `R` to produce some basic parametric inferential statistics along with some linear regression models. Along the way, we'll also provide you with an overview of the nuts and bolts of `R`.
