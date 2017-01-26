@@ -1,5 +1,8 @@
 # spring-2017-seminar-01
 
+### Repository Purpose
+Introduces seminar students to RStudio and RNotebooks.
+
 ### Repository Contents
 This repository contains files for:
 -   `.gitignore`
